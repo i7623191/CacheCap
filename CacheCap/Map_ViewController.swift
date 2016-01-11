@@ -115,7 +115,7 @@ extension Map_ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
         
-        if !isShowing {
+        if !isShowing && !hasShownCloseAlert{
             isShowing = true
 
             let refreshAlert = UIAlertController(title: "GeoCache Found", message: "You have entered a Geofence containing the Geocache", preferredStyle: UIAlertControllerStyle.Alert)
@@ -123,7 +123,7 @@ extension Map_ViewController: CLLocationManagerDelegate {
         
             refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
             
-            refreshAlert .dismissViewControllerAnimated(true, completion: nil)
+            refreshAlert.dismissViewControllerAnimated(true, completion: nil)
             self.isShowing = false
             
         }))
@@ -158,3 +158,5 @@ extension Map_ViewController: CLLocationManagerDelegate {
     
     }
 }
+
+//if was in real world notifications would not re occur as the gpx file would not be running in the background
