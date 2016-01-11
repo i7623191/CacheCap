@@ -1,0 +1,6 @@
+framework module Pods_CacheCap {
+  umbrella header "Pods-CacheCap-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv4-Yd-WIg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="dhm-HW-Tq9">
+            <objects>
+                <viewController id="Eya-oC-bbb" customClass="Welcome__ViewController" customModule="CacheCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwY-Zz-Eya"/>
+                        <viewControllerLayoutGuide type="bottom" id="3kq-bv-UvH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="10d-wT-Zqc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAv-Qp-bI9">
+                                <rect key="frame" x="54" y="345" width="212" height="223"/>
+                                <state key="normal" image="3appLogo"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="Yft-r8-DCp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-Gv-zmp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="302"/>
+                                <string key="text">CacheCap is a geocache app.  The geocache contains a time capsule of images and text which relate to Bournemouth. 
+
+The inspiration for CacheCap came while taking one of many walks in Bournemouth and wondering what future generations would see, and how much the landscape may change.
+
+On the next screen you will see a map and if within range of the geocache you will see an alert.    
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="hZc-sR-VfW">
+                        <barButtonItem key="backBarButtonItem" title="Welcome" id="tKu-Ml-C51"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICT-XW-T80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="685"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Map_ViewController" customModule="CacheCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YH-CC-9sJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NVR-FE-Edh"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNy-qJ-SQS">
+                                <rect key="frame" x="554" y="562" width="46" height="30"/>
+                                <connections>
+                                    <segue destination="cq0-ge-My9" kind="push" identifier="slideShow" id="d42-s9-gXf"/>
+                                </connections>
+                            </button>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eK-Xa-0mT">
+                                <rect key="frame" x="0.0" y="350" width="320" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" Slide Down to Hide This Message">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+- The map will zoom in as you get closer to the geocache and zoom out if you get further away.«
+
+- When you reach the geocache you will receive an alert notifying you you have reached the geocache location, which will allow you to see the time capsule images and text.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+DQ
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4YH-CC-9sJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="8wg-Oz-Zdr"/>
+                            <constraint firstItem="4YH-CC-9sJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dxr-B7-g6a"/>
+                            <constraint firstItem="4YH-CC-9sJ" firstAttribute="trailing" secondItem="6eK-Xa-0mT" secondAttribute="trailing" id="GuH-3a-hCD"/>
+                            <constraint firstAttribute="trailing" secondItem="6eK-Xa-0mT" secondAttribute="trailing" id="MbW-Mk-v6b"/>
+                            <constraint firstItem="4YH-CC-9sJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="SNd-u2-kmO"/>
+                            <constraint firstItem="6eK-Xa-0mT" firstAttribute="leading" secondItem="4YH-CC-9sJ" secondAttribute="leading" id="YRa-ZC-gQp"/>
+                            <constraint firstItem="6eK-Xa-0mT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="286" id="w4B-XU-7eE"/>
+                            <constraint firstItem="6eK-Xa-0mT" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="32" id="yMz-EY-B1K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9I4-Ay-dkk">
+                        <barButtonItem key="backBarButtonItem" title="Map" id="nlF-b3-hb0"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="cgy-AL-MXQ">
+                                <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="jPO-2B-Cwm">
+                                    <rect key="frame" x="255" y="6" width="51" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <connections>
+                                        <action selector="SwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZPz-rd-3Gm"/>
+                                    </connections>
+                                </switch>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="EK3-2b-iaE">
+                                <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Satellite View" textAlignment="center" minimumFontSize="17" id="zNc-12-BX8">
+                                    <rect key="frame" x="139" y="7" width="108" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapToggle" destination="jPO-2B-Cwm" id="XHd-JH-bGv"/>
+                        <outlet property="mapView" destination="4YH-CC-9sJ" id="y6W-NM-sBo"/>
+                        <outlet property="myText" destination="6eK-Xa-0mT" id="ZbA-A7-9bw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1979" y="685"/>
+        </scene>
+        <!--Slide Show View Controller-->
+        <scene sceneID="h9O-qg-AXo">
+            <objects>
+                <viewController id="cq0-ge-My9" customClass="SlideShow__ViewController" customModule="CacheCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qqH-Qn-WKV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gfy-4r-LWL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CsZ-3l-sfi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FireWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAX-n8-RLK">
+                                <rect key="frame" x="200" y="515" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DeckcChair" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-PT-8Hs">
+                                <rect key="frame" x="35" y="515" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beach Huts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amp-LX-fnf">
+                                <rect key="frame" x="195" y="366" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surf School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQb-p1-WfJ">
+                                <rect key="frame" x="33" y="366" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJd-TA-hZH">
+                                <rect key="frame" x="182" y="278" width="117" height="80"/>
+                                <state key="normal" title="BeachHuts" image="BeachHuts"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="rxh-1O-V9W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P02-gx-KRG">
+                                <rect key="frame" x="20" y="419" width="117" height="80"/>
+                                <state key="normal" title="DeckChair" image="DeckChair"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="6rX-Nh-KSP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-0J-JWN">
+                                <rect key="frame" x="182" y="419" width="117" height="80"/>
+                                <state key="normal" title="FireWorks" image="FireWorks"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="oOm-oj-Ozx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRX-SE-tRP">
+                                <rect key="frame" x="22" y="278" width="117" height="80"/>
+                                <state key="normal" title="Surf" image="Surf"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="47x-pD-JJv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oceanarium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-dM-ltT">
+                                <rect key="frame" x="192" y="223" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AirShow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-Ss-OEG">
+                                <rect key="frame" x="46" y="223" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txX-Hf-lz0">
+                                <rect key="frame" x="20" y="135" width="117" height="80"/>
+                                <state key="normal" title="AirShow" image="AirShow"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="jrl-VO-Rdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB7-2c-3vo">
+                                <rect key="frame" x="182" y="135" width="117" height="80"/>
+                                <state key="normal" title="Oceanarium" image="Oceanarium"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="cq0-ge-My9" eventType="touchUpInside" id="XO5-H3-HAx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk7-6M-aSw">
+                                <rect key="frame" x="10" y="59" width="300" height="83"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Congratulations ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="22" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+You have found the Time Capsule
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fxC-rI-mBX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="bXg-HV-I8c" kind="show" identifier="ShowImage" id="PEV-Vy-cSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lur-GV-znd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="1433"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="DYO-Ns-Opb">
+            <objects>
+                <viewController id="bXg-HV-I8c" customClass="PhotoViewController" customModule="CacheCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wd4-Fp-2dB"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIf-IG-CHQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nRj-ai-tSH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icQ-8q-Jtv">
+                                <rect key="frame" x="0.0" y="115" width="320" height="245"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="due-Ky-s3r">
+                                <rect key="frame" x="47" y="409" width="240" height="110"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="icQ-8q-Jtv" id="Mqn-MI-v5f"/>
+                        <outlet property="showText" destination="due-Ky-s3r" id="yhv-T5-SJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0a-iR-ZWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="1433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gzd-G2-l8w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sv4-Yd-WIg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hB5-Zr-nR6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Eya-oC-bbb" kind="relationship" relationship="rootViewController" id="S97-j2-ivR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVu-Ci-MeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="1075"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3appLogo" width="667" height="663"/>
+        <image name="AirShow" width="3712" height="2088"/>
+        <image name="BeachHuts" width="3264" height="2448"/>
+        <image name="DeckChair" width="3456" height="2592"/>
+        <image name="FireWorks" width="3712" height="2088"/>
+        <image name="Oceanarium" width="3456" height="2592"/>
+        <image name="Surf" width="3264" height="2448"/>
+    </resources>
+</document>

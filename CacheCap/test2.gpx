@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode"> 
+
+    <!--
+            Provide one or more waypoints containing a latitude/longitude pair. If you provide one
+            waypoint, Xcode will simulate that specific location. If you provide multiple waypoints,
+            Xcode will simulate a route visitng each waypoint.
+     -->
+  
+         
+         <!--   
+                Optionally provide a time element for each waypoint. Xcode will interpolate movement
+                at a rate of speed based on the time elapsed between each waypoint. If you do not provide
+                a time element, then Xcode will use a fixed rate of speed.
+          
+                Waypoints must be sorted by time in ascending order.
+          -->
+        
+        
+        <wpt lat="50.903875" lon="-1.407567">
+            <name>southampton</name>
+            <time>2014-09-24T14:55:42Z</time>
+        </wpt>
+        
+        <wpt lat="50.904391" lon="-1.407610">
+            <name>southampton2</name>
+            <time>2014-09-24T14:55:45Z</time>
+        </wpt>
+
+        
+        <wpt lat="50.716622" lon="-1.874981">
+            <name>Bournemouth Pier1</name>
+            <time>2014-09-24T14:55:48Z</time>
+        </wpt>
+        
+<!--        <wpt lat="50.716411" lon="-1.875156">-->
+<!--            <name>Bournemouth Pier2</name>-->
+<!--            <time>2014-09-24T14:56:07Z</time>-->
+<!--        </wpt>-->
+<!--        -->
+<!--        <wpt lat="50.716622" lon="-1.874981">-->
+<!--            <name>Bournemouth Pier3</name>-->
+<!--            <time>2014-09-24T14:56:10Z</time>-->
+<!--        </wpt>-->
+
+        <wpt lat="50.716404" lon="-1.874935">
+            <name>Bournemouth Pier4</name>
+            <time>2014-09-24T14:56:14Z</time>
+        </wpt>
+
+</gpx>
